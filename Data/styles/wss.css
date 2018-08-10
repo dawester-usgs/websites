@@ -1,0 +1,604 @@
+@charset "utf-8";    /* Shannon Watermolen uses this as her first line, not sure what it does  */
+
+/* To provide support for HTML5  */
+article, aside, figcaption, figure, footer, header, hgroup, nav, section
+{    display: block;}
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+/* ---  Zero out all margins, paddings, and borders on all pages. This should prevent spacing differences in various browsers, and will allow me to set consistent margins on all page elements.   --- */
+html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  margin-left: -6px;
+  margin-right: 2px; 
+  margin-top: 3px;
+} 
+
+/* Got from About, 6/14  */
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*  ----  Displays a custom image in the top banner   ---- */  
+#usgscolorband { background: #416AB1 url("http://water.usgs.gov/images/banners/water_banner.jpg") 178px 0px no-repeat; } 
+
+/*  ----  Sets the background color and text color for the site-title bar   --- */ 
+#usgstitle { background-color: #416AB1;} 
+
+/*  ----   By default, USGS has set the font size to "small" in order to provide a consistent size for content across all pages  -- */
+body { font-size: small; margin-left:15px; }
+th, td { font-size: small; }
+
+#container {
+	width: 100%;
+	text-align: left;
+	margin: 0;
+	background: #FFF url('/edu/images/rightsidebackground225.gif') repeat-y 0px 0px;
+	background-position: right;
+	}
+
+/*  Overflow500: To create a scroll bar in a area for a window height of 500 pixels. Initially for the 2013 Photo Gallery  */
+.overflow550 {overflow: scroll; height: 600px;}	
+	
+/*  Set maximum width of component to 1400 pixels (for Photo Gallery in this case)  */
+.max1400 {max-width:1400px;}
+	
+/*  ----  Sets styles for the two panes in the main content. Rightpane is the shaded navigation pane.   --- */ 	
+#leftpane {padding-right: 20px; }
+#rightpane { width: 210px; 
+	background-color: #fafafd; -moz-border-radius: 10px;-webkit-border-radius: 10px;
+	border: 1px solid #777777; padding:.3em .3em;
+	padding-left: 9px;
+	font-size: .85em; }
+#rightpane h2 {	background-color: #416ab1; padding: 5px; color: #ffffff; margin: 0px; ;text-align: center;}
+#rightpane li { list-style-image: url('/frameworkfiles/images/icons/dotgreen7.gif');  padding-bottom: 2px; margin-left: -11px;}
+#rightpane h3 { color: #885522; font-size: .95em; font-weight: bold; padding-top: 7px; }
+#rightpane li a:link { color: #0044bb; text-decoration: none; }
+#rightpane li a:visited { color: #0044bb; text-decoration: none; }
+#rightpane li a:hover, a:active { color: #bb4444; text-decoration: underline; }
+#rightpane p {
+	margin-top:1em;
+ 	margin-right: 10px;
+	margin-bottom: -0.8em;
+	font-size: 95%; }
+#rightpane p.notopmargin { margin-top: -1em; }
+#rightpane p.nobottommargin { margin-bottom: 0em; }
+#rightpane ul li { padding-bottom: 4px; line-height: 114%; }
+	
+/* BLACK TOP NAVIGATION BAR*/
+#topnav {
+	width: 100%;
+	margin: 0 0 20px 0;
+	background-color: #1b1b1b;
+	clear: left;
+	/*border-bottom: 1px solid #ffffff;  (Try to put white border below black bar when a subbar is shown, but how to take it off of the active topic (grey) box? */
+	}
+
+	
+
+	
+	
+.link-noline a:link { color: #0044bb; text-decoration: none; }
+.link-noline a:visited { color: #0044bb; text-decoration: none; }
+.link-noline  a:hover, a:active { color: #bb4444; text-decoration: underline; }
+
+#navlist {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+	float: left; /* Added 12/22/08 to fix bar links shifting problem when browser text size increased */
+	}
+
+#navlist li {
+	font-size: .7em;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0;
+	float: left;
+	border-right: 1px solid #ffffff;
+	}
+
+#navlist a  {
+		color: white;
+		text-decoration: none;
+		padding: 6px 6px; /*adding the padding here made the gray go across each button*/
+		text-align: center;
+		display: block; 	
+	}
+	
+/* This makes the active link box have a grey background, with yellow text. It was commented out, not sure why. I think I wanted a more generic way of doing it, rather than hard code each link name. Maybe that never worked, so I'm turning this back on. 12/20/09  */
+#home #navlist .home a,
+#wb #navlist .wb a,
+#wp #navlist .wp a,
+#wc #navlist .wc a,
+#sw #navlist .sw a,
+#gw #navlist .gw a,
+#qw #navlist .qw a,
+#wu #navlist .wu a,
+#ac #navlist .ac a,
+#qa #navlist .qa a,
+#pic #navlist .pic a
+{	color: #ffe855;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #505050;	} 
+	
+#topnav a:hover, #topnav a:focus, #topnav a:active {
+	font-weight: bold;
+	color:  #fff;
+	text-decoration: underline;
+	background: #416ab1;
+	color:#ffe855;	}
+/*  ----   ADMIN bar styles    ----   */
+#adminnav {
+	background-color: #999999;
+	font-size: .8em;
+	text-align: right;
+	font-weight: bold;
+	width: 100%;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	margin-top: 0px;
+	margin-bottom: 0px; }
+	
+#adminnav a:link, #adminnav a:visited {
+	color: black;
+	margin-right: 8px;
+	text-decoration: none;
+	margin-left: 3px; }
+	
+#adminnav a:hover, #adminnav a:active {
+	color: #eed855;
+	margin-right: 8px;
+	margin-left: 3px;
+	text-decoration: underline; }
+
+/*  ----   Water-Cycle right-side menu bar   ----   */
+	.wc-rightside {-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-color: rgb(153, 153, 153); 
+	width: 190px; margin-left: 1em; 
+	margin-bottom: 0.3em; 
+	font-size: 0.85em;	
+	float: right;
+	border-top: 1px solid #D9E0E6;
+	border-right: 1px solid #C8CDD2;
+	border-bottom: 1px solid #C8CDD2;
+	border-left: 1px solid #D9E0E6;	
+	padding: 8px;
+	margin-right: 10px;
+	background-color: #fafafa;
+}
+	.wc-rightside  ul {  padding-left: 22px;}
+	.wc-rightside  li {	list-style-image: url('/frameworkfiles/images/icons/dotcyan9.gif'); padding-bottom: 2px; }
+/*  ----   Water-Cycle Language TItle Bar    ----   */
+#wclanguage-title {
+	background-color: #999999;
+	text-align: left;
+	font-size: 1em;
+	font-weight: bold;
+	width: 100%;
+	padding-top: 2px;
+	padding-bottom:3px;
+	margin-top: -1px;
+	margin-bottom: 1px; }
+	
+/*  HR - centered blue short. Used in Water Cycle language pages    */	
+	.hr-wc { color: #3366bb; width: 500px; text-align: center; clear: both; }
+	
+/*  Other water cycle styles  */
+	 #topics li { list-style-image: url('/frameworkfiles/images/icons/dotcyan9.gif'); }
+	 .diagram-credit {font-size: .8em; margin-top: 0px; }
+				
+/*  Make all "content-pane" list bullets the brown diamond  */		
+#main li { list-style-image: url('/frameworkfiles/images/icons/dotbrown7.gif'); }
+#main {margin-right: 240px; }
+/*----  General hyperlink styles ----*/
+a:link { color: #1144ff;	text-decoration: underline; }
+a:visited {	color: purple;	text-decoration: underline; }
+a:hover, a:active {	text-decoration: none; }
+
+/*----   Styles for the main topic pages. Make the links clean looking, too   ----*/
+#topicpages h2 { color: #885522;}
+#topicpages li a:link { color: #0044bb; text-decoration: none; }
+#topicpages  li a:visited { color: #0044bb; text-decoration: none; }
+#topicpages  li a:hover, a:active { color: #bb4444; text-decoration: underline; }
+
+/*----   Styles for the Learn More topic titles at the bottom of each page   ----*/
+.heading-learnmore {
+	background-color: #aaaacc; padding: 4px; color: #222222; border-bottom: thin solid; margin-bottom: 5px;}
+#learnmore h2 { color: #885522;
+	font-size: .85em;
+	font-weight: bold;
+	margin-bottom: -7px;
+	border-bottom: 1px solid #595959; 
+	padding-top: -12px; 
+	padding-bottom: 4px; }
+#learnmore li a:link { color: #0044bb; text-decoration: none; }
+#learnmore  li a:visited { color: #0044bb; text-decoration: none; }
+#learnmore  li a:hover, a:active { color: #bb4444; text-decoration: underline; }
+#learnmore li { list-style-image: url('/frameworkfiles/images/icons/dotbrown7.gif'); }
+
+/*----  Use class=picleftborder/picrightborder to frame an image and float it inside of a text paragraph.
+		Only apply this style to image 
+		To have a framed image inside a DIV with a caption, set the DIV class to picleft/picright and set the image class 		               to "addborder" ----*/	
+.picrightborder{
+	float: right;
+	border-top: 1px solid #D9E0E6;
+	border-right: 1px solid #C8CDD2;
+	border-bottom: 1px solid #C8CDD2;
+	border-left: 1px solid #D9E0E6;	
+	padding: 4px;
+	margin-right: 10px;
+	background-color: #fafafa;
+}
+
+/*  -------------------          Hover popup information boxes    -------------------------------------- */
+.infobox {
+	display:inline;
+	z-index:4;
+	position:relative;
+	background-color:transparent;
+	width:96px;
+	padding:1px;
+	font-size: .75em;
+	border-top: 1px solid #d9e0e6;-moz-border-radius: 10px;-webkit-border-radius: 10px;
+	border-right: 1px solid #c8cdd2;
+	border-bottom: 1px solid #c8cdd2;
+	border-left: 1px solid #d9e0e6;
+   	padding: 4px; 
+	 }
+	
+.infobox .about	 {display:none;}
+
+.infobox:hover .about {
+	display:block;
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	width:300px;
+	padding:5px 5px 5px;
+	border:1px solid #900;
+	background-color:#FFEFfF; }
+	
+/*  -------------------       Define Box: Popup mouse hover term definition styles    -------------------------------------- */
+.definebox {
+	display:inline;
+	position:relative;
+	border-bottom: dashed thin #777777;
+	cursor:help;
+	 }
+	
+.definebox .define	 {display:none;}
+
+.definebox:hover .define {
+	display:block;
+	position:absolute;
+	font-size: .85em;
+	left:-250px;
+	top:-1px;
+	width:300px;
+	padding:5px 5px 5px;
+	border:1px solid #900;
+	background-color:#FFEFfF; }
+
+/*   --------------    Styles for format the main subtopic titles in the main topic pages    ------------   */
+	
+.topicpage-titles { 
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: -7px;
+	border-bottom: 1px solid #595959; 
+	padding-top: 2px; 
+	padding-bottom: 4px; 
+}	
+
+.qa-titles { 
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: -7px;
+	border-bottom: 1px solid #595959; 
+	padding-top: 2px; 
+	padding-bottom: 4px; 
+}	
+	
+/*----  Styles to set up a left and right content area (about 1/2 the width of the #mainbody content area). Using tables is an alternative to this. Needed to add clear:both to the leftside style as without a clear then when a window is expanded wide enough, the right side would appear below the left side.   ----*/
+.leftside {	float: left; width: 48%; clear: both; }
+.rightside { float: right; width: 48%; }
+
+/* --- Put a dark  line at the bottom of an object, usually a header -----*/
+.bottomborder { border-bottom-color: #333333;  border-bottom-style: solid; border-bottom-width: 1px; }
+.bottomborder2 { border-bottom-color: #333333;  border-bottom-style: solid; border-bottom-width: 2px; }
+.underlinewrap { margin-bottom: -5px; border-left: 1px solid #999999; border-bottom: 1px solid #999999; padding: 3px;  margin-top: 25px; }
+
+
+/* ---- Place a line above, below, or both, mainly for a text paragraph    ------ */
+.lineabovebelow {
+	border-top-width: 1px; 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	border-top-style: solid; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	border-color: #aaaaaa;
+}
+
+.lineabove {
+	border-top-width: 1px; 
+	border-top-style: solid; 
+	padding-top: 4px; 
+	padding-bottom: 4px; 
+	border-color: #aaaaaa;
+}
+
+.linebelow {
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	border-color: #aaaaaa;
+}
+
+/*----  Add a faint border around any element  ----*/
+.addborders {
+    border-top: 1px solid #d9e0e6;-moz-border-radius: 10px;-webkit-border-radius: 10px;
+	border-right: 1px solid #c8cdd2;
+	border-bottom: 1px solid #c8cdd2;
+	border-left: 1px solid #d9e0e6;
+   	padding: 4px; 
+}
+
+
+/*----   Vertically top-align contents in a table cell    ----*/
+td {vertical-align: top;}	
+tr {vertical-align: top;}	
+
+/*----  Reduce text-page width to minimize horizontal scrolling (especially on water use pages) ----*/
+.width90 { width: 90%; }
+
+/*----  Formatting styles ----*/
+.clear {clear: both;}
+
+/* May 2009: Generic styles for new blueish tables */
+	.tableblue table { border:1px solid #c5cfd8; margin:1em auto; border-collapse:collapse; }
+	.tableblue caption { color: #4a6894; font-size:.95em;  font-weight: bold; margin:1em 0 0 0; padding:0;  text-align:center;  margin-bottom: 10px; } 
+	.tableblue tr td { background: #fcfcff } 
+	.tableblue tr.even td { background: #f5f9ff } 
+	.tableblue td { color: #577187; border:1px solid #c5cfd8; padding:.24em 1em;} 
+	.tableblue th {border: 1px solid #adc0d0; padding:.3em .8em; background:#e6ecf5;  font:bold .95em/1em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif; color:#4683b3} 
+	.subcaption {font-size: .9em; font-weight: normal;}
+	
+	table.data {
+  border-spacing: 0px;
+  padding: 2px;
+  text-align: center;
+  }
+  
+table.wudata td { font-size: .8em;  }
+
+.marginbottom10 {margin-bottom:10px;}
+.marginbottom20 {margin-bottom:20px;}
+.margintop10 {margin-top:10px;}
+.margintop20 {margin-top:20px;}
+.margintop30 {margin-top:30px;}
+.margintop40 {margin-top:40px;}
+.paddingtop15 {padding-top:15px;}
+
+/*----  Center an image horizontally, on its own line  ----*/
+.centerit { display: block; width: 100%;
+				margin: 0 auto;
+				text-align: center; }
+				
+.center-table  table{	display: block; margin-left: auto; margin-right: auto; }
+/*------------------------------------------------------------------------------------------------------*/
+/*   Text styles                                                                                        */
+/*------------------------------------------------------------------------------------------------------*/
+
+.smaller  {font-size: .9em;}
+.size85  {font-size: .85em;}
+.larger  {font-size: 120%;}
+.bold {font-weight: bold; font-size: .9em;}
+.boldsmaller {font-weight: bold; font-size: .9em; }
+.italics {font-style: italic;}
+.underline {text-decoration:underline}
+.strikethrough { text-decoration: line-through; }
+.headingunderline { 
+	margin-bottom: 5px; /*why doesn't this work? */
+	font-size: 100%; 
+	border-bottom: 1px solid #004499; 
+	padding-top: 2px; 
+	padding-bottom: 4px; 
+}
+
+.alignleft {text-align: left;}
+.alignright {text-align: right;}
+.center {text-align: center;}
+.middle {vertical-align: middle;}
+
+.reference { 
+	  margin-left: 3em;
+      text-indent: -3em;
+      margin-right: 3em;
+}  
+
+/*---   Set some Max Widths to keep paragraphs, mostly, from extending too long   ---*/
+.max70 {max-width: 70em;}
+
+/*----  Heading styles, generally for #mainbody  ----*/
+h1 {
+	color: #003388;
+	font-size: 140%;
+}
+	
+h2 {
+	color: #003388;
+	font-size: 110%;
+	margin-top: 20px;
+	margin-bottom: -5px;
+}
+	
+h3 {
+	color: #003388;
+	font-size: 95%;
+	margin-bottom: -5px;
+}
+	
+h4 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 85%;
+}
+	
+h5 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 80%;
+}
+	
+h6 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 80%;
+}
+
+/* --- Adjust H2 size of subtitles in the picture gallery    --*/
+.gallery-subtitle {font-size: 0.85em; font-weight: bold; color: #772266; }
+
+/*----  Margins, padding  ----*/
+.marginbottom10 { margin-bottom: 10px; }
+.marginbottom20 { margin-bottom: 20px; }
+.marginleft50  { margin-left: 50px; }
+.marginright50  { margin-right: 50px; }
+.indentquote { margin-left: 50px; margin-right: 50px; } 
+/*------------------------------------------------------------------------------------------------------*/
+/*   Image styles                                                                                       */
+/*------------------------------------------------------------------------------------------------------*/
+
+img {
+	border: none;
+}
+
+/*----  Center an image horizontally, on its own line  ----*/
+.imgcenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*   Styles from new site for updating old site to 2005 water use  --*/
+
+#rightpart {padding-left: 20px; }
+#leftpart { width: 203px; min-width: 200px;
+	background-color: #f6f5ff; -moz-border-radius: 5px;-webkit-border-radius: 5px;
+	border: 1px solid #777777; padding:.4em .3em;
+	padding-left: 3px;
+	font-size: .8em; }
+#leftpart h2 {	background-color: #416ab1; padding: 5px; color: #ffffff; margin: 0px; ;text-align: center; margin-right: 7px}
+#leftpart li { list-style-image: url('/frameworkfiles/images/icons/dotgreen7.gif');  padding-bottom: 2px; margin-left: -13px;}
+#leftpart h3 { color: #885522; font-size: .95em; font-weight: bold; padding-top: 7px; }
+#leftpart li a:link { color: #0044bb; text-decoration: none; }
+#leftpart li a:visited { color: #0044bb; text-decoration: none; }
+#leftpart li a:hover, a:active { color: #bb4444; text-decoration: underline; }
+#leftpart p {
+	margin-top:1em;
+ 	margin-right: 10px;
+	margin-bottom: -0.8em;
+	font-size: 95%; }
+#leftpart p.notopmargin { margin-top: -1em; }
+#leftpart p.nobottommargin { margin-bottom: 0em; }
+#leftpart ul li { padding-bottom: 4px; line-height: 114%; }
+
+#langs ul li { list-style-image: url('/frameworkfiles/images/icons/dotyellow.gif');  padding-bottom: 4px; margin-left: -22px;}
+
+/*----  Center a table; contents left justified inside of TDs (09/2009)  ----*/
+.centertable  table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+/*----     Picleft and Picright: Floats an image (or element) left or right, with some added margin  ----*/
+.picleft  {	float: left; margin-right: 12px; }
+.picright {	float: right; margin-left: 12px; }
+.picright p, .picleft p { font-size: .85em; 	line-height: 1.2em; margin-top: 2px; margin-bottom: 2px;}
+
+/*  CCS3: Drop shadow, 6 pixels,  mainly the large pictures in the Gallery   */
+.shadow6 { box-shadow: 6px 6px 12px #333;
+-webkit-box-shadow: 6px 6px 12px #333;
+-moz-box-shadow: 6px 6px 12px #333; }
+
+.shadow1 { box-shadow: 1px 1px 2px #333;
+-webkit-box-shadow: 1px 1px 2px #333;
+-moz-box-shadow: 1px 1px 2px #333; }
+
+.shadow2 { box-shadow: 2px 1px 4px #333;
+-webkit-box-shadow: 2px 2px 4px #333;
+-moz-box-shadow: 2px 2px 4px #333; }
+
+/*----  Caption styles for text when enclosed in a picleft/picright DIV   ----*/
+.caption {
+	font-size: 80%;
+	margin-bottom: 15px;
+	line-height: 1.2em;
+	margin-top: 2px;
+	text-align: left;
+	color: black;
+}
+.caption p { margin-top: 5px; margin-bottom: 4px; font-size: .95em;}
+
+
+.fullsize { margin-top: 1em; font-family: 'trebuchet MS', sans-serif;}
+.fullsize a:link { color: #5555cc;	text-decoration: none;   font-weight: bold; font-size: 1.0em;}
+.fullsize a:visited {	color: #5555cc;	text-decoration: none;  font-weight: bold; font-size: 1.0em;}
+.fullsize a:hover, a:active {	color: #cc5555; text-decoration: underline; }	
+
+/*--------------     Colors: Mainly for text    -------*/
+.white { color: #fff; }
+.black { color: #000; }
+.blue {	color: #0033aa; }
+.midblue {	color: #416ab1; }
+.greymed { color: #666; }
+.greydark { color: #414141; }
+.red { color: #992255; }
+.green { color: #227a22; }
+.brown { color: #995511; }
+.purple { color: #722072; }
+.greylight {color:#999;}
+
+
+/*----     Background colors for elements, such as for table cells. These styles are generally light in shade. These styles are not meant for heading backgrounds (those are further down).   ----*/
+.backgreylight {
+	background-color: #f6f6f6;}
+
+	
+/*----     Heading colors. These styles are generally meant for colorizing headings, as they add color to the heading text, background area, and add padding around the text.   ----*/
+.headblue {
+	background-color: #004499; padding: 4px; color: #ffffff;}
+.headmidblue {
+	background-color: #416ab1; padding: 4px; color: #ffffff;}
+.headmidbrown {
+	background-color: #994411; padding: 4px; color: #ffffff;}
+
+/*----     Flyoutbox: Create box to right to hold, mainly, an H3 colored background box with links/text below, in light grey background   ----*/
+.flyoutbox {
+	float: right;
+	border: 1px solid;
+	border-color: #999999; 
+	background-color: #fafafa;
+	margin-right: 20px;
+	margin-left: 1em; 
+	margin-bottom: 0.3em; 
+	font-size: 0.85em; 
+	list-style-image: url(http://www.usgs.gov/frameworkfiles/images/icons/dotcyan9.gif;}
+	
+	/*----     QA-LearnMore: Formatting for the learn more bottom section at the bottom of individual Q&A pages   ----*/
+	.qa-learnmore {
+		ul: margin-top: 0px; margin-left: -25px;
+		margin-top: 20px; 
+}

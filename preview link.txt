@@ -1,0 +1,3 @@
+file://afs/.usgs.gov/www/www/htdocs/water/lowermississippigulf/map/products.html
+
+https://www2.usgs.gov/preview/water/lowermississippigulf/data/ar_data.html
