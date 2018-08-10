@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 websites for data page
 https://arrtmc.er.usgs.gov/caw/index.html
 https://ar.water.usgs.gov/hotsprings/
+=======
+websites for data page
+https://arrtmc.er.usgs.gov/caw/index.html
+https://ar.water.usgs.gov/hotsprings/
+>>>>>>> a40cdef3e9aeab6e774678649268ed06341ef88c
